@@ -1,15 +1,17 @@
 import React from 'react'
 import JobList from './JobList'
+import Loader from './Loader'
+import ProfileLink from './ProfileLink'
 
 const JobCards = ({ jobBrowse = [], Loading }) => {
   return (
     <div className="p-6">
       {Loading ? (
-        <p>Loading freelancers...</p>
+        <Loader />
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {(jobBrowse || []).map((freelancer, index) => (
-            <div key={index} className="bg-white p-4 shadow rounded-lg">
+            <div key={index} className="bg-white p-4 shadow rounded-lg hover:shadow-xl shadow-green-300 ease-out transition:0.5s">
               <img src={freelancer.picture.large} alt={freelancer.name.first} className="w-20 h-20 rounded-full mx-auto mb-2" />
               <h2 className="text-center font-semibold">{freelancer.name.first} {freelancer.name.last}</h2>
               <p className="text-sm text-center text-gray-500">{freelancer.jobTitle}</p>
@@ -25,8 +27,12 @@ const JobCards = ({ jobBrowse = [], Loading }) => {
               <div className="text-center text-xs text-gray-400 mt-1">
                 {freelancer.experienceLevel}
               </div>
+              <div className='flex justify-center my-4'>
+              <ProfileLink />
+              </div>
             </div>
           ))}
+          
         </div>
       )}
     </div>
