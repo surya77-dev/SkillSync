@@ -29,7 +29,7 @@ const JobCards = ({ jobBrowse = [], Loading }) => {
                 {freelancer.experienceLevel}
               </div>
               <div className='flex justify-center my-4'>
-              <div className="inline-block bg-white  text-green-600 px-4 py-1 rounded hover:bg-green-50">
+              <div className="inline-block bg-white  px-4 py-1 rounded">
                   <Link to={`/profile/${freelancer.login.uuid}`} state={{ user: freelancer }}>
                     <ProfileLink />
                   </Link>

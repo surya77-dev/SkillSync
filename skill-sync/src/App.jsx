@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import About from "./pages/About";
 import Whatsnew from "./pages/Whatsnew";
 import Footer from "./components/Footer";
+import Register from "./components/Register";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} /> 
         <Route path="/NewUpdates" element={<Whatsnew />} />
         <Route path="/About" element={<About />} />
+        <Route path="/register" element={< Register />} />
       </Routes>
       <Footer />
     </Router>

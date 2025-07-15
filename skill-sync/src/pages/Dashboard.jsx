@@ -49,6 +49,7 @@ const Dashboard = () => {
 
               <div className="flex justify-end">
                 <button
+                  onClick={()=> removeJob(job.id)}
                   className="px-4 py-1 text-sm text-red-600 border border-red-500 rounded hover:bg-red-50"
                 >
                   Delete
