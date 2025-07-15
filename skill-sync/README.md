@@ -14,11 +14,10 @@ SkillSync is a fully responsive and interactive freelance marketplace user inter
 
 ## 📸 Screenshots
 
-| Home Page | Browse Freelancers | Profile View |
-|-----------|---------------------|--------------|
-| ![Home](./public/Home.png) | ![Browse](./public/Browse.png) | ![Dashboard](./public/Dashboard.png) | ![Profile](./public/Profile.png)
+| Home Page | Browse Freelancers | Dashboard | Profile View |
+|-----------|--------------------|-----------|---------------|
+| ![Home](./screenshots/Home.png) | ![Browse](./screenshots/Browse.png) | ![Dashboard](./screenshots/Dashboard.png) | ![Profile](./screenshots/Profile.png) |
 
----
 
 ## ✨ Features
 
