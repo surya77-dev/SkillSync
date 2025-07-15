@@ -13,25 +13,39 @@ const JobList = () => {
     })
     const [Loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        const fetchJobs = async () => {
-            try{
-                const res = await fetch('https://randomuser.me/api/?results=99')
-                const data = await res.json();
+useEffect(() => {
+  const fetchOrLoadJobs = async () => {
+    const cached = localStorage.getItem('freelancers');
 
-                const enriched = data.results.map(enrichUser)
-                setjobBrowse(enriched)
-                setfilteredJobs(enriched)
-                console.log(enriched)
-                setLoading(false)
-            } catch (err) {
-                console.log(err)
-                setLoading(true)
-            }
-            
-        }
-      fetchJobs();
-    }, [])
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      setjobBrowse(parsed);
+      setfilteredJobs(parsed);
+      setLoading(false);
+    } else {
+      try {
+        const res = await fetch('https://randomuser.me/api/?results=99');
+        const data = await res.json();
+
+        const enriched = data.results.map(enrichUser);
+
+        // Save to localStorage
+        localStorage.setItem('freelancers', JSON.stringify(enriched));
+
+        setjobBrowse(enriched);
+        console.log(enriched);
+        setfilteredJobs(enriched);
+        setLoading(false);
+      } catch (err) {
+        console.error('Fetch failed:', err);
+        setLoading(false);
+      }
+    }
+  };
+
+  fetchOrLoadJobs();
+}, []);
+
 
     useEffect(() => {
       const filtered = jobBrowse.filter((freelancer) => {

@@ -23,6 +23,9 @@ const Navbar = () => {
           <Link to="/post-job" className="hover:text-green-600">Post a Job</Link>
         </li>
         <li>
+          <Link to="/Dashboard" className="hover:text-green-600">Dashboard</Link>
+        </li>
+        <li>
             <Link to="/NewUpdates" className="hover:text-green-600">WhatsNew</Link>
         </li>
         <li>

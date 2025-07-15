@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Whatsnew from "./pages/Whatsnew";
 import Footer from "./components/Footer";
 
+
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+
   );
 }
 

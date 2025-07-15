@@ -2,6 +2,7 @@ import React from 'react'
 import JobList from './JobList'
 import Loader from './Loader'
 import ProfileLink from './ProfileLink'
+import { Link } from 'react-router-dom'
 
 const JobCards = ({ jobBrowse = [], Loading }) => {
   return (
@@ -28,7 +29,11 @@ const JobCards = ({ jobBrowse = [], Loading }) => {
                 {freelancer.experienceLevel}
               </div>
               <div className='flex justify-center my-4'>
-              <ProfileLink />
+              <div className="inline-block bg-white  text-green-600 px-4 py-1 rounded hover:bg-green-50">
+                  <Link to={`/profile/${freelancer.login.uuid}`} state={{ user: freelancer }}>
+                    <ProfileLink />
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
