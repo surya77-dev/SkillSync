@@ -48,18 +48,19 @@ SkillSync is a fully responsive and interactive freelance marketplace user inter
 
 ## 📁 Folder Structure
 
-skill-sync/
-│
-├── public/
-│ └── assets/, images/, logos/
-├── src/
-│ ├── components/ # UI components like Navbar, Footer, Cards
-│ ├── pages/ # Page components: Home, Browse, Profile, Login
-│ ├── context/ # Job Context (PostJob, Dashboard)
-│ ├── data/ # enrichUser, static lists
-│ ├── App.jsx # Main layout + routing
-│ └── main.jsx # Entry point
-└── README.md
+.
+├── skill-sync/
+├── │
+├── ├── public/
+├── │ └── assets/, images/, logos/
+├── ├── src/
+├── │ ├── components/ # UI components like Navbar, Footer, Cards
+├── │ ├── pages/ # Page components: Home, Browse, Profile, Login
+├── │ ├── context/ # Job Context (PostJob, Dashboard)
+├── │ ├── data/ # enrichUser, static lists
+├── │ ├── App.jsx # Main layout + routing
+├── │ └── main.jsx # Entry point
+└── └── README.md
 
 
 ---
