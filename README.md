@@ -8,7 +8,7 @@ SkillSync is a fully responsive and interactive freelance marketplace user inter
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view on Vercel](https://skillsync.vercel.app) *(Coming soon)*
+🔗 [Click here to view on Vercel](https://skill-sync-silk.vercel.app/) 
 
 ---
 
