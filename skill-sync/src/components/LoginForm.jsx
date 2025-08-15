@@ -33,7 +33,7 @@ const LoginForm = () => {
             const password = e.target.password.value;
 
             // Dummy login validation
-            if (email === 'user@skillsync.com' && password === '123456') {
+            if (email === 'user@skillsync.com' && password === 'user001') {
               localStorage.setItem("isLoggedIn", "true"); // ✅ store login state
               alert("🔐 Login successful! Welcome to SkillSync.");
               navigate("/home");
@@ -60,8 +60,8 @@ const LoginForm = () => {
               name="password"
               type="password"
               className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="123456"
-              defaultValue="123456"
+              placeholder="user001"
+              defaultValue="user001"
               required
             />
           </div>
