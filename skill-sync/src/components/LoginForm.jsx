@@ -34,6 +34,7 @@ const LoginForm = () => {
 
             // Dummy login validation
             if (email === 'user@skillsync.com' && password === '123456') {
+              localStorage.setItem("isLoggedIn", "true"); // ✅ store login state
               alert("🔐 Login successful! Welcome to SkillSync.");
               navigate("/home");
             } else {
