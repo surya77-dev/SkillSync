@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ For routing after post
 import { usePost } from "../context/usePost";
 
-
-
-const skillsList = ["React", "Tailwind", "JavaScript", "Figma", "Python", "Node.js","Expressjs","MangoDb","Git"];
+const skillsList = ["React", "Tailwind", "JavaScript", "Figma", "Python", "Node.js", "Expressjs", "MangoDb", "Git"];
 const levels = ["Beginner", "Intermediate", "Expert"];
 
 const PostJob = () => {
   const { storeJob } = usePost();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: "",
@@ -72,6 +72,9 @@ const PostJob = () => {
     });
 
     alert("🎉 Job posted successfully!");
+
+    // ✅ Redirect to Dashboard after posting
+    navigate("/dashboard");
   };
 
   return (
@@ -172,6 +175,17 @@ const PostJob = () => {
               </label>
             ))}
           </div>
+        </div>
+
+        {/* Note to Dashboard */}
+        <div className="mt-4 bg-gray-100 shadow-inner rounded-md p-3 text-center">
+          <p className="text-sm text-gray-500 italic">
+            💡 Tip: After posting, you will be redirected to your{" "}
+            <a href="/dashboard" className="text-green-600 hover:underline">
+              Dashboard
+            </a>{" "}
+            to manage your jobs.
+          </p>
         </div>
 
         {/* Submit */}
